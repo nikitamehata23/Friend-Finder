@@ -31,7 +31,7 @@ You will use Express to handle routing. Make sure you deploy your app to Heroku 
 
 ### Instructions
 
-1. Your survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.
+1. My survey  have 5 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.
 
 2. Your `server.js` file should require the basic npm packages we've used in class: `express`, `body-parser` and `path`.
 
@@ -74,17 +74,11 @@ You will use Express to handle routing. Make sure you deploy your app to Heroku 
        * User 1: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`
        * User 2: `[3, 2, 6, 4, 5, 1, 2, 5, 4, 1]`
        * Total Difference: **2 + 1 + 2 =** **_5_**
-   * Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both `5-3` and `3-5` as `2`, and so on. 
+   * I use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both `5-3` and `3-5` as `2`, and so on. 
    * The closest match will be the user with the least amount of difference.
 
-7. Once you've found the current user's most compatible friend, display the result as a modal pop-up.
+7. Once we've found the current user's most compatible friend, display the result as a modal pop-up.
    * The modal should display both the name and picture of the closest match. 
-
-- - -
-
-### Minimum Requirements
-
-Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed.
 
 - - -
 
@@ -92,6 +86,6 @@ Attempt to complete homework assignment as described in instructions. If unable 
 
 Now that we have a backend to our applications, we use Heroku for hosting. Please note that while **Heroku is free**, it will request credit card information if you have more than 5 applications at a time or are adding a database. 
 
-Please see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details. 
+We can see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details. 
 
 - - - - - - - - - - - - - - - - - - - - - -
