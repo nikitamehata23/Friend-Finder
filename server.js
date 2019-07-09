@@ -1,15 +1,25 @@
-const bodyParser = require('body-parser');
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 9000;
+// Dependencies
+var express = require("express");
+var bodyParser = require("body-parser");
+var path = require("path");
 
+var app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+var PORT = process.env.PORT || 9090;
+
+// For serving of static CSS
+app.use(express.static(__dirname + "/app/css"));
+
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+// API and HTML routes
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
-require("./app/routing/htmlRoutes")(app);
-require("./app/routing/apiRoutes")(app);
+app.listen(PORT, function() {
+	console.log("App listening on PORT: " + PORT);
+});
 
-
-app.listen(port, () => console.log(`Listening on port ${port}`));
